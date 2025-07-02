@@ -9,7 +9,7 @@ Kultra Mega Stores Invetory consists that specialised on Office supplies and fur
 The primary source of that used here is KMS Case Study.csv that was extracted and loaded, no need of transformation for analysis purposes.
 
 ### Tools Used
-- Power BI for creating report Download Here
+- Power BI for creating report [Download Here](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
 - Data Cleasing and Preparation
 - The dataset was given, is a well struture data that need not to be adjusted
 
