@@ -50,7 +50,7 @@ This is where some basic functions/outline were used such as:
 An analysis of comparation on both Top 10 Customers and 10 Bottom customers activities were dawn, for the KMS to increase the revenue from the 10 Bottom Customers this following points are what contributed to the revenue increasement in Top Customers, which must be put into:
 
 '''  SQL
-  Avg Female Salary = CALCULATE(AVERAGE('Sheet1'[Salary]))
+  Avg Female Salary = CALCULATE(AVERAGE('Sheet1'[Salary]
 '''
 
 Avg Male Salary = CALCULATE(AVERAGE('Sheet1'[Salary]))
