@@ -15,6 +15,8 @@
 
 [Data Analysis](#data-analysis)
 
+[Key Insights](#key-insights)
+
 [Data Visualiation](#data-visualition)
 
 ### Project Overview
@@ -33,6 +35,7 @@ The primary source of that used here are Palmoria Grop Employee.ulsx and Palmori
 - Unpivot command was used
 - Relationship was created beweet two tables
 - The datasets were given, is a well struture data, transformed, thereafter downloaded into Power Bi
+- DAX and Power Query
 
 ### Explotory Data Analysis.
 ---
@@ -67,21 +70,39 @@ This is where some basic functions/outline were used such as:
   - New Salary
   - TotalCompany Payout
 
-### Code Used
+## 🎯 Key Insight
 ---
-An analysis of comparation on both Top 10 Customers and 10 Bottom customers activities were dawn, for the KMS to increase the revenue from the 10 Bottom Customers this following points are what contributed to the revenue increasement in Top Customers, which must be put into:
+👥 Gender Distribution by Department
+* Gender balance varies by department.
 
-'''  SQL
-  Avg Female Salary = CALCULATE(AVERAGE('Sheet1'[Salary]
-'''
+* Some departments have a higher male or female presence, with others showing equal or unspecified distributions.
+  
+🌍 Gender Distribution by Region
+* Employees are located across Abuja, Kaduna, and Lagos.
 
-Avg Male Salary = CALCULATE(AVERAGE('Sheet1'[Salary]))
-Gender Count = COUNTROWS('Sheet1' )
-GenderPayGap = [AvgM.Salary]-[AvgF.Salary]
-BelowMinimumPay = CALCULATE(COUNTROWS('EmployeeData'),'EmployeeData'[Salary] < 90000)
-SalaryBand = VAR SALARYAMOUNT= 'EmployeeData'[Salary] VAR Bandsize = 10000 VAR LowerBound = INT('EmployeeData'[Salary]/ Bandsize) *Bandsize VAR UpperBound = LowerBound + Bandsize RETURN "$" & FORMAT (LowerBound, "#,0")& "-$"& FORMAT(UpperBound, "#,0")
- BonusPercentage = LOOKUPVALUE(BonusRules[BonusPercentage],BonusRules[Rating], EmployeeData[Rating], BonusRules[Department], EmployeeData[Department])
- BonusAmount = EmployeeData[Salary]*[BonusPercentage]
-TotalCompany Payout = Sum(EmployeeData[BonusAmount])
-New Salary = EmployeeData[Salary]+EmployeeData[BonusAmount]
+* Each region shows different trends in gender representation.
+
+### ✅ Gender Pay Gap
+---
+- The **Engineering** department at **kaduna** & **Lagos** shows a reverse gender pay gap favoring women by **52.07%** & **11.05%** respectively.
+- The **Human Resources** department at **Abuja** has the highest gender pay gap at **25.14%** in favor of men.
+- 
+### ✅ Salary Distribution
+---
+- Distribution is shown in **$10,000** salary bands.
+- The majority of employees earn between **$60,000 – $90,000**.
+- **654 employees** earn less than **$90,000** annually.
+
+### ✅ Employee Ratings
+---
+- Female and male employees have similar rating distributions.
+- A significant number of employees remain **"Not Rated"**, indicating room for improved evaluation practices.
+
+### ✅ Bonus Payouts
+---
+- Bonus payouts vary across regions with **Lagos** receiving the highest at **$825.91K**.
+- Individual bonuses and updated salaries are tracked per employee.Department], EmployeeData[Department])
+
+
+ **DAX** and **Power Query**
 
