@@ -3,6 +3,19 @@
 
 ### Project 2 Topic: Palmoria Group HR Analysis
 ----
+[Project Overview](#project-overview)
+
+[Data Source](#data-source)
+
+[Tools Used](#tools-used)
+
+[Data Cleasing and Preparation](#Data-cleasing-and-preparation)
+
+[Explotory Data Analysis](#explotory-data-analysis)
+
+[Data Analysis](#data-analysis)
+
+[Data Visualiation](#data-visualition)
 
 ### Project Overview
 ---
