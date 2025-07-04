@@ -1,50 +1,65 @@
 # Project-Two
 
-### Project 2 Topic: Kultra Mega Stores Inventory
+### Project 2 Topic: Palmoria Group HR Analysis
 
 ### Project Overview
-Kultra Mega Stores Invetory consists that specialised on Office supplies and furniture to Indivudial consumers, small businesses(retail), and large corporate clients (wholesales) across Lagos, Nigeia. A data from 2009-2012 of a common separated values (.csv) excel file that constist of 21 Columns and 8,399 Rows was shared to analyze the data, present the key insights, finding and recommendation for further decision making.
+Palmora Group, a manufacturing company based in Nigeria, embroiled in issues bordering on gender inequality in its 3 regions. Recently, the company was published as #### "Palmoria, the Manufacturing Patriachy"' and because of their ambition to scale the business to other regions and even overseas, they decided to find solution issues like the gender gap pay, amongst other issues. Two excel files were shared gnerate insight that can addressed the company issues in the area of gender-related within the company & regions to be  analysed and visualised with appropriate charts.
 
 ### Data Source
-The primary source of that used here is KMS Case Study.csv that was extracted and loaded, no need of transformation for analysis purposes.
+The primary source of that used here are Palmoria Grop Employee.ulsx and Palmoria Grop Bonus Rules.ulsx, which was extracted, transformed and loaded for analysis and visuliation purposes.
 
 ### Tools Used
 - Power BI for creating report [Download Here](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
+- Clt G was used to assign generic name into the blank fields, remove of past employees and NULL department
 - Data Cleasing and Preparation
-- The dataset was given, is a well struture data that need not to be adjusted
+- Unpivot command was used
+- Relationship was created beweet two tables
+- The datasets were given, is a well struture data, transformed, thereafter downloaded into Power Bi
 
 ### Explotory Data Analysis.
-EDA was exploring to provide answer to the following question in respect of data given:
+EDA was exploring to generate answer the following question in respect of available datasets:
 
-### Case Scenatio I
+### Pointers from Mr. Gamma, an insider of Palmoria Group
 
-- Which product category had the highest sales?
-- What are the Top 3 and Bottom 3 Regions in terms of sales?
-- What were the total sales of appliances in Ontario?
-- Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
-- KMS incurred the most shipping cost using which shipping method?
-- Case Scenario II
-- Who are the most valuable customers, and what products or services do they typically purchase?
-- Which small business consumer had the highest sales?
-- Which Corporate Consumer placed the most number of orders in 2009-2012?
+- What is the gender distribution in the organisation? Distil to regions and departments
+- Show insights on ratings based on gender?
+- Analse the company's salary structure. Identify if there is a gender pay gap. If there is, identify the department and regions that should be the focus of management?
+- A recent regulation was adopted which regquires manufacturing companies employees a minimum of $90,000
+  - Does Palmoria meet this requirement?
+  - Show the pay distribution of employees grouped by a band of $10,000. For example:
+  - WHow many employees fall into a band of $10,000 - $20,000, $20,000 - $30,000, etc.?
+  - Also visualize this by regions
 - Which consumer was the most profitable one?
 - Which customer returned items, and what segment do they belomng to?
 - If the delivery truck is the most economical but the slowest shipping methond and Express Air, is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer
 
 ### Data Analysis
 This is where some basic functions/outline were used such as:
-- Extraction of Dataset from csv file and loaded
-- Oder_Status data was added
-- Numerous charts applicable was used to solve the related questions
-- Attrition charts to anlysis to how increase the revenue from bottom 10 customers
+- Extraction of Dataset from csv files, transformed and loaded
+- Creation of Measure and Columm for the following:
+  - Average Female Salary
+  - Average Male Salary
+  - BelowMinimumPay
+  - Bonusamount
+  - BonusPecentage
+  - GenderCount
+  - GenderPayGap
+  - New Salary
+  - TotalCompany Payout
 
-### Submission/Advise/Suggetion
+### Code Used
 An analysis of comparation on both Top 10 Customers and 10 Bottom customers activities were dawn, for the KMS to increase the revenue from the 10 Bottom Customers this following points are what contributed to the revenue increasement in Top Customers, which must be put into:
-- That the Top 10 Customer deal in Technology accessories which move market more than other items, this should introduce to bottom customers for increament
-- The mode of shipping the large order of the top customers are through Regular Air for timely delivery, this must be accorded to increase revenue for bottom customer
-- The delivery by truck is the most economical, but the slowest shipping mothod while the express air is the fasetest but the most expensive one. The company spent appropriately cost by using Express Air shiipping method because of the following:
-  - The Express Air is faster
-  - The Express air deliver used base on Order Priority
-  - The Express Air delivery duration is lesser thatn other shipping method
-  - The Express Air is the rmost effective in terms of timely delivery.
+'''
+  SQL
+  Avg Female Salary = CALCULATE(AVERAGE('Sheet1'[Salary]))
+'''
+Avg Male Salary = CALCULATE(AVERAGE('Sheet1'[Salary]))
+Gender Count = COUNTROWS('Sheet1' )
+GenderPayGap = [AvgM.Salary]-[AvgF.Salary]
+BelowMinimumPay = CALCULATE(COUNTROWS('EmployeeData'),'EmployeeData'[Salary] < 90000)
+SalaryBand = VAR SALARYAMOUNT= 'EmployeeData'[Salary] VAR Bandsize = 10000 VAR LowerBound = INT('EmployeeData'[Salary]/ Bandsize) *Bandsize VAR UpperBound = LowerBound + Bandsize RETURN "$" & FORMAT (LowerBound, "#,0")& "-$"& FORMAT(UpperBound, "#,0")
+ BonusPercentage = LOOKUPVALUE(BonusRules[BonusPercentage],BonusRules[Rating], EmployeeData[Rating], BonusRules[Department], EmployeeData[Department])
+ BonusAmount = EmployeeData[Salary]*[BonusPercentage]
+TotalCompany Payout = Sum(EmployeeData[BonusAmount])
+New Salary = EmployeeData[Salary]+EmployeeData[BonusAmount]
 
