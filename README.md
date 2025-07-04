@@ -17,7 +17,7 @@
 
 [Key Insights](#key-insights)
 
-[Dashboard Featuresn](#ddatshboard-features)
+[Dashboard Features](#ddatshboard-features)
 
 ### Project Overview
 ---
