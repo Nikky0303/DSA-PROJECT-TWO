@@ -17,7 +17,7 @@
 
 [Key Insights](#key-insights)
 
-[Data Visualiation](#data-visualition)
+[Dashboard Featuresn](#ddatshboard-features)
 
 ### Project Overview
 ---
@@ -103,6 +103,14 @@ This is where some basic functions/outline were used such as:
 - Bonus payouts vary across regions with **Lagos** receiving the highest at **$825.91K**.
 - Individual bonuses and updated salaries are tracked per employee.Department], EmployeeData[Department])
 
+## Dashboard Features📂 
+---
 
- **DAX** and **Power Query**
+- 📌 Gender-based salary & bonus analysis
+- 📌 Department-level insights
+- 📌 Ratings distribution by gender
+- 📌 Regional breakdowns for total pay and bonuses
+- 📌 Visual drill-through for individual employee analysis
+
+
 
