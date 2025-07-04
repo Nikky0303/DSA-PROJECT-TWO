@@ -1,14 +1,18 @@
 # Project-Two
 
 ### Project 2 Topic: Palmoria Group HR Analysis
+----
 
 ### Project Overview
-Palmora Group, a manufacturing company based in Nigeria, embroiled in issues bordering on gender inequality in its 3 regions. Recently, the company was published as #### "Palmoria, the Manufacturing Patriachy"' and because of their ambition to scale the business to other regions and even overseas, they decided to find solution issues like the gender gap pay, amongst other issues. Two excel files were shared gnerate insight that can addressed the company issues in the area of gender-related within the company & regions to be  analysed and visualised with appropriate charts.
+---
+Palmora Group, a manufacturing company based in Nigeria, embroiled in issues bordering on gender inequality in its 3 regions. Recently, the company was published as "Palmoria, the Manufacturing Patriachy"' and because of their ambition to scale the business to other regions and even overseas, they decided to find solution issues like the gender gap pay, amongst other issues. Two excel files were shared gnerate insight that can addressed the company issues in the area of gender-related within the company & regions to be  analysed and visualised with appropriate charts.
 
 ### Data Source
+---
 The primary source of that used here are Palmoria Grop Employee.ulsx and Palmoria Grop Bonus Rules.ulsx, which was extracted, transformed and loaded for analysis and visuliation purposes.
 
 ### Tools Used
+---
 - Power BI for creating report [Download Here](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
 - Clt G was used to assign generic name into the blank fields, remove of past employees and NULL department
 - Data Cleasing and Preparation
@@ -17,9 +21,11 @@ The primary source of that used here are Palmoria Grop Employee.ulsx and Palmori
 - The datasets were given, is a well struture data, transformed, thereafter downloaded into Power Bi
 
 ### Explotory Data Analysis.
+---
 EDA was exploring to generate answer the following question in respect of available datasets:
 
 ### Pointers from Mr. Gamma, an insider of Palmoria Group
+---
 - What is the gender distribution in the organisation? Distil to regions and departments
 - Show insights on ratings based on gender?
 - Analse the company's salary structure. Identify if there is a gender pay gap. If there is, identify the department and regions that should be the focus of management?
@@ -33,6 +39,7 @@ EDA was exploring to generate answer the following question in respect of availa
 - If the delivery truck is the most economical but the slowest shipping methond and Express Air, is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer
 
 ### Data Analysis
+---
 This is where some basic functions/outline were used such as:
 - Extraction of Dataset from csv files, transformed and loaded
 - Creation of Measure and Columm for the following:
@@ -47,6 +54,7 @@ This is where some basic functions/outline were used such as:
   - TotalCompany Payout
 
 ### Code Used
+---
 An analysis of comparation on both Top 10 Customers and 10 Bottom customers activities were dawn, for the KMS to increase the revenue from the 10 Bottom Customers this following points are what contributed to the revenue increasement in Top Customers, which must be put into:
 
 '''  SQL
