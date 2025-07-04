@@ -20,7 +20,6 @@ The primary source of that used here are Palmoria Grop Employee.ulsx and Palmori
 EDA was exploring to generate answer the following question in respect of available datasets:
 
 ### Pointers from Mr. Gamma, an insider of Palmoria Group
-
 - What is the gender distribution in the organisation? Distil to regions and departments
 - Show insights on ratings based on gender?
 - Analse the company's salary structure. Identify if there is a gender pay gap. If there is, identify the department and regions that should be the focus of management?
@@ -49,10 +48,12 @@ This is where some basic functions/outline were used such as:
 
 ### Code Used
 An analysis of comparation on both Top 10 Customers and 10 Bottom customers activities were dawn, for the KMS to increase the revenue from the 10 Bottom Customers this following points are what contributed to the revenue increasement in Top Customers, which must be put into:
+
 '''
   SQL
   Avg Female Salary = CALCULATE(AVERAGE('Sheet1'[Salary]))
 '''
+
 Avg Male Salary = CALCULATE(AVERAGE('Sheet1'[Salary]))
 Gender Count = COUNTROWS('Sheet1' )
 GenderPayGap = [AvgM.Salary]-[AvgF.Salary]
